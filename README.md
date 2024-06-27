@@ -40,3 +40,14 @@ Here are followings:
 
 - Gaussian Blur
 ![gaussian_blur](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/07577276-d6b7-49ed-953b-1f7c03ff3ba2)
+
+# Auto Image Annotation using Yolo v5
+In this project I used `Yolov5` from `huggingface` website. This is pre-trained yolov5 I used for image annotation and for object detection. It annotate the image and then detect it using yolov5 technology and tell us what is it? 
+
+### Link: `git clone https://huggingface.co/fcakyon/yolov5s-v7.0`
+
+- Image1
+![cats](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/72e0750f-f4fb-474e-8498-c76dfb34cb3e)
+
+- Image2
+![ali_det](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/c9683e31-be17-47a6-b34e-15f441de7adf)
