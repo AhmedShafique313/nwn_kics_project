@@ -2,6 +2,7 @@
 ### NWN lab projects
 
 # Image Annotation
-- Opening Image
+- Opening image
 - line on image
 - circle on image
+- Rectangle on image
