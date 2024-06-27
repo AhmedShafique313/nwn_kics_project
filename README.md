@@ -13,7 +13,7 @@ Here are some outputs related to opencv python
 ![image](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/9ded0aee-1501-4bed-99e8-131ac86c92d7)
 
 - Circle on iamge
-![image](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/9ded0aee-1501-4bed-99e8-131ac86c92d7)
+![image](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/f110f79f-ec35-47aa-aee3-2b54800458e5)
 
 - Rectangle on image
 ![image](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/4a3bdacc-6aa3-4eab-8b77-0b86ed896b78)
