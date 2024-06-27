@@ -9,7 +9,7 @@ model.agnostic = False
 model.multi_label = False
 model.max_det = 1000
 
-img = r'C:\Users\Personal\Documents\projects\KICS Second Project\yolov5_image_annotate\cats.jpg'
+img = r'C:\Users\Personal\Documents\projects\KICS Second Project\yolov5_image_annotate\abdullah_det.jpeg'
 
 result = model(img)
 result = model(img, size=640)
