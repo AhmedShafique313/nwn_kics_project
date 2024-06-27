@@ -22,3 +22,10 @@ cv2.imwrite(os.path.join(output_dir, 'vertically fliiped'), img)
 rotated = rotate_90(img)
 cv2.imwrite(os.path.join(output_dir, 'rotated image'), img)
 
+brighted = brightness_level(img, 50)
+cv2.imwrite(os.path.join(output_dir, 'brighted image'), img)
+
+blured = gaussian_blur(img)
+cv2.imwrite(os.path.join(output_dir, 'blured image'), img)
+
+print('Image augmentation complete and all the augmented stuff stored in augmentation_dataset folder')
