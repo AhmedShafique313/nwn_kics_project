@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-from specifications import flip_horizontal, flip_vertical, rotate_90, brightness_level, gaussian_blur
+from specifications import flip_horizontal, flip_vertical, rotate_90, adjust_brightness, gaussian_blur
 
 output_dir = 'augmented_dataset'
 if not os.path.exists(output_dir):
@@ -22,7 +22,7 @@ cv2.imwrite(os.path.join(output_dir, 'vertically fliiped.png'), img)
 rotated = rotate_90(img)
 cv2.imwrite(os.path.join(output_dir, 'rotated image.png'), img)
 
-brighted = brightness_level(img, 50)
+brighted = adjust_brightness(img, 50)
 cv2.imwrite(os.path.join(output_dir, 'brighted image.png'), img)
 
 blured = gaussian_blur(img)
