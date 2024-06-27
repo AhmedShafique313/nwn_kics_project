@@ -21,3 +21,5 @@ def brightness_level(image, value=30):
     final_hsv = cv2.merge((h, s, v))
     return cv2.cvtColor(final_hsv, cv2.COLOR_HSV2BGR)
 
+def gaussian_blur(image, kernal_size=(5, 5)):
+    return cv2.GaussianBlur(image, kernal_size, 0)
