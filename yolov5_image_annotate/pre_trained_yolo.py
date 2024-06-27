@@ -22,4 +22,4 @@ scores = predictions[:, 4]
 categories = predictions[:, 5]
 
 result.show()
-result.save(save_dir = 'outcomes/')
+result.save(save_dir = r'C:\Users\Personal\Documents\projects\KICS Second Project\yolov5_image_annotate\outcomes/')
