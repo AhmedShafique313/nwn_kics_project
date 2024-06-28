@@ -3,8 +3,8 @@ import numpy as np
 import os
 from scipy.io import wavfile
 
-dirr = '/home/ali/Desktop/GDS/Data/card data/c/'   # set path of the .wav file directory
-output_dir = '/home/ali/Desktop/GDS/Data/card data/a/'  # set path of the output directory
+dirr = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\Sniper rifle audio dataset'   # set path of the .wav file directory
+output_dir = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\output_audio/'  # set path of the output directory
 
 # Create the output directory if it doesn't exist
 if not os.path.exists(output_dir):
