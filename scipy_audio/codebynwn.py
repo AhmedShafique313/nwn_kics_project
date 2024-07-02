@@ -12,14 +12,16 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 lst = os.listdir(dirr)
+sample_range = 12000
 
 for f in lst:
     if f.endswith('.wav'):
         filepath = os.path.join(dirr, f)
         sample_rate, audio_data = wavfile.read(filepath)
+        print('Sample Rate: ',sample_rate)
 
         # Plot the entire audio data
-        plt.plot(audio_data)
+        plt.plot(audio_data[:sample_range])
         plt.xlabel('Sample')
         plt.ylabel('Amplitude')
         plt.title(f)
