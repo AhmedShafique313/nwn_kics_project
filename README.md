@@ -51,3 +51,6 @@ In this project I used `Yolov5` from `huggingface` website. This is pre-trained 
 
 - Image2
 ![ali_det](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/c9683e31-be17-47a6-b34e-15f441de7adf)
+
+### Sniper Rifle GunShot Project
+The folder named with `scipy_audio` is located for this project. Throughout this project we pass the .wav file to the program and it converts it to plot image using scipy features. 
