@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 # Path to the audio file
-audio_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\librosa_melspectrogram\youtube_shot.wav'
+audio_path = r'C:\\Users\\Personal\\Documents\\projects\\KICS Second Project\\librosa_melspectrogram\\youtube_shot.wav'
 
 # Load the audio file
 y, sr = librosa.load(audio_path, sr=None)
@@ -28,7 +28,7 @@ plt.title('Mel spectrogram (First 12,000 samples)')
 plt.tight_layout()
 
 # Ensure the output directory exists
-output_directory = r'C:\Users\Personal\Documents\projects\KICS Second Project\librosa_melspectrogram\output_directory'
+output_directory = r'C:\\Users\\Personal\\Documents\\projects\\KICS Second Project\\librosa_melspectrogram\\output_directory\\'
 os.makedirs(output_directory, exist_ok=True)
 
 # Path to save the output image
