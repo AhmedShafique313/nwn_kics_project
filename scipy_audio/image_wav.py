@@ -3,7 +3,7 @@ import numpy as np
 import os
 from scipy.io.wavfile import write
 
-image_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\output_audio\test1_dataset.wav.png'
+image_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\output_audio\youtube_shot.wav.png'
 image = cv2.imread(image_path)
 
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
