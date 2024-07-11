@@ -30,6 +30,7 @@ Here are followings:
 - Brightness level
 - Gaussian Blur
 
+![1](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/337d7f0e-bf54-4d9e-ad33-4d4449e9ba63)
 # Auto Image Annotation using Yolo v5
 In this project I used `Yolov5` from `huggingface` website. This is pre-trained yolov5 I used for image annotation and for object detection. It annotate the image and then detect it using yolov5 technology and tell us what is it? 
 
