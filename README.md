@@ -24,22 +24,11 @@ The image augmentation is a process of generating dataset by using original data
 `Image Augmentation` task I used `opencv-python` and generates multiple images by single image. 
 Here are followings:
 - Original Image:
-![original](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/62f9d641-2ceb-4f6e-a9ef-85c1bb1adae6)
-
 - Flipped Horizontal
-![flipped_horizontal](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/b9e49124-de89-4eec-87f6-07590382feb3)
-
 - Flipped Vertical
-![flipped_vertical](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/cad2c353-7eb4-4e68-a367-4ea0f218f3f2)
-
 - Rotated 90 degree
-![rotated_90](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/8da6591b-a83c-4a7f-9c86-6e950222e1f3)
-
 - Brightness level
-![brighter](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/60c06918-6b54-424c-affd-94042b4bdea8)
-
 - Gaussian Blur
-![gaussian_blur](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/07577276-d6b7-49ed-953b-1f7c03ff3ba2)
 
 # Auto Image Annotation using Yolo v5
 In this project I used `Yolov5` from `huggingface` website. This is pre-trained yolov5 I used for image annotation and for object detection. It annotate the image and then detect it using yolov5 technology and tell us what is it? 
@@ -47,9 +36,11 @@ In this project I used `Yolov5` from `huggingface` website. This is pre-trained 
 ### Link: `git clone https://huggingface.co/fcakyon/yolov5s-v7.0`
 
 - Image1
+
 ![cats](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/72e0750f-f4fb-474e-8498-c76dfb34cb3e)
 
 - Image2
+
 ![ali_det](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/c9683e31-be17-47a6-b34e-15f441de7adf)
 
 # Sniper Rifle GunShot Project
