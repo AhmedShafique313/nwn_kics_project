@@ -46,3 +46,8 @@ In this project I used `Yolov5` from `huggingface` website. This is pre-trained 
 
 # Sniper Rifle GunShot Project
 The folder named with `scipy_audio` is located for this project. Throughout this project we pass the .wav file to the program and it converts it to plot image using scipy features. 
+
+![2](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/7e691b5f-b12a-4763-919c-84a0fad1f6d1)
+After making the plot we also passed these files in python program to plot there `MEL-SPECTROGRAPHS` using python
+
+![3](https://github.com/AhmedShafique313/nwn_kics_project/assets/99950606/b5469bea-c6e5-41ca-87fa-5c0526930007)
