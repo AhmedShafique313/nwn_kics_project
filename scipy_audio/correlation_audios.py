@@ -18,6 +18,21 @@ def normalize_audio(data):
     # Normalize audio data to range [-1, 1]
     return data / np.max(np.abs(data))
 
+def plot_audio_signals(audio1, audio2, sample_rate):
+    # Plot the audio signals
+    time1 = np.linspace(0, len(audio1) / sample_rate, num=len(audio1))
+    time2 = np.linspace(0, len(audio2) / sample_rate, num=len(audio2))
+    
+    plt.figure(figsize=(12, 6))
+    plt.plot(time1, audio1, label='Audio 1', color='blue')
+    plt.plot(time2, audio2, label='Audio 2', color='green')
+    plt.title('Gunshot Audio Signals')
+    plt.xlabel('Time (seconds)')
+    plt.ylabel('Amplitude')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
 def plot_correlation(audio1, audio2, sample_rate):
     # Compute the correlation of the two audio signals
     correlation = correlate(audio1, audio2, mode='full')
@@ -25,10 +40,11 @@ def plot_correlation(audio1, audio2, sample_rate):
     
     # Plot the correlation
     plt.figure(figsize=(12, 6))
-    plt.plot(lags / sample_rate, correlation)
+    plt.plot(lags / sample_rate, correlation, label='Correlation', color='red')
     plt.title('Correlation between two gunshot audio signals')
     plt.xlabel('Time lag (seconds)')
     plt.ylabel('Correlation')
+    plt.legend()
     plt.grid(True)
     plt.show()
 
@@ -49,6 +65,9 @@ audio2 = convert_to_mono(audio2)
 # Normalize the audio data
 audio1 = normalize_audio(audio1)
 audio2 = normalize_audio(audio2)
+
+# Plot the individual audio signals
+plot_audio_signals(audio1, audio2, sample_rate1)
 
 # Plot the correlation
 plot_correlation(audio1, audio2, sample_rate1)
