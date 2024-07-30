@@ -24,8 +24,8 @@ def plot_audio_signals(audio1, audio2, sample_rate):
     time2 = np.linspace(0, len(audio2) / sample_rate, num=len(audio2))
     
     plt.figure(figsize=(12, 6))
-    plt.plot(time1, audio1, label='Audio 1', color='blue')
-    plt.plot(time2, audio2, label='Audio 2', color='green')
+    plt.plot(time1, audio1, label='Local Audio sample', color='blue')
+    plt.plot(time2, audio2, label='Internet audio sample', color='green')
     plt.title('Gunshot Audio Signals')
     plt.xlabel('Time (seconds)')
     plt.ylabel('Amplitude')
@@ -45,8 +45,8 @@ def plot_correlation(audio1, audio2, sample_rate):
     
     # Plot the correlation with different labels
     plt.figure(figsize=(12, 6))
-    plt.plot(lags[:half] / sample_rate, correlation_audio1, label='Audio 1', color='blue')
-    plt.plot(lags[half:] / sample_rate, correlation_audio2, label='Audio 2', color='green')
+    plt.plot(lags[:half] / sample_rate, correlation_audio1, label='Local Audio sample', color='blue')
+    plt.plot(lags[half:] / sample_rate, correlation_audio2, label='Internet Audio sample', color='green')
     plt.title('Correlation between two gunshot audio signals')
     plt.xlabel('Time lag (seconds)')
     plt.ylabel('Correlation')
