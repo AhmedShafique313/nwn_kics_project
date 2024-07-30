@@ -12,6 +12,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 lst = os.listdir(dirr)
+starting_range = 0
 sample_range = 1500
 
 for f in lst:
@@ -21,7 +22,7 @@ for f in lst:
         print('Sample Rate: ',sample_rate)
 
         # Plot the entire audio data
-        plt.plot(audio_data[:sample_range])
+        plt.plot(audio_data[starting_range:sample_range])
         plt.xlabel('Sample')
         plt.ylabel('Amplitude')
         plt.title(f)
@@ -30,3 +31,5 @@ for f in lst:
 
         print("Image created for file:", f)
         break  # Exit the loop after processing the first file
+
+
