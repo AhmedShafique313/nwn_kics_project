@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 # Path to the audio file
-audio_path = r'C:\\Users\\Personal\\Documents\\projects\\KICS Second Project\\librosa_melspectrogram\\valid 5.wav'
+audio_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\librosa_melspectrogram\internet_audio_sample16.wav'
 
 # Load the audio file
 y, sr = librosa.load(audio_path, sr=None)
@@ -30,7 +30,7 @@ output_directory = r'C:\\Users\\Personal\\Documents\\projects\\KICS Second Proje
 os.makedirs(output_directory, exist_ok=True)
 
 # Path to save the output image
-output_image_path = os.path.join(output_directory, 'valid5_mel.png')
+output_image_path = os.path.join(output_directory, 'internet_valid16.png')
 
 # Save the plot as a PNG file
 plt.savefig(output_image_path)
