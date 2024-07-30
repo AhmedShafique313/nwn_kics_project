@@ -38,9 +38,15 @@ def plot_correlation(audio1, audio2, sample_rate):
     correlation = correlate(audio1, audio2, mode='full')
     lags = np.arange(-len(audio1) + 1, len(audio2))
     
-    # Plot the correlation
+    # Separate the correlation based on the audio signals
+    half = len(correlation) // 2
+    correlation_audio1 = correlation[:half]
+    correlation_audio2 = correlation[half:]
+    
+    # Plot the correlation with different labels
     plt.figure(figsize=(12, 6))
-    plt.plot(lags / sample_rate, correlation, label='Correlation', color='red')
+    plt.plot(lags[:half] / sample_rate, correlation_audio1, label='Audio 1', color='blue')
+    plt.plot(lags[half:] / sample_rate, correlation_audio2, label='Audio 2', color='green')
     plt.title('Correlation between two gunshot audio signals')
     plt.xlabel('Time lag (seconds)')
     plt.ylabel('Correlation')
@@ -71,3 +77,4 @@ plot_audio_signals(audio1, audio2, sample_rate1)
 
 # Plot the correlation
 plot_correlation(audio1, audio2, sample_rate1)
+
