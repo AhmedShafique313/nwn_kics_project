@@ -12,7 +12,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 lst = os.listdir(dirr)
-sample_range = 12000
+sample_range = 1500
 
 for f in lst:
     if f.endswith('.wav'):
