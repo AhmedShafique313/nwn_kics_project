@@ -56,7 +56,7 @@ def plot_correlation(audio1, audio2, sample_rate):
 
 # Load the two gunshot audio files
 file_path1 = r'C:\Users\Personal\Documents\projects\KICS Second Project\librosa_melspectrogram\S4.wav'
-file_path2 = r'C:\Users\Personal\Documents\projects\KICS Second Project\librosa_melspectrogram\valid 3.wav'
+file_path2 = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\valid13.wav'
 sample_rate1, audio1 = load_audio(file_path1)
 sample_rate2, audio2 = load_audio(file_path2)
 
