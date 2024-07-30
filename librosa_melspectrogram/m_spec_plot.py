@@ -11,7 +11,7 @@ audio_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\librosa_
 y, sr = librosa.load(audio_path, sr=None)
 
 
-sample_range = 1500
+sample_range = 13000
 y = y[:sample_range]
 S = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=128, fmax=4000)
 
