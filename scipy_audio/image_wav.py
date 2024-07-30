@@ -3,7 +3,7 @@ import numpy as np
 import os
 from scipy.io.wavfile import write
 
-image_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\New plots\S9.wav.png'
+image_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\New plots\S1.wav.png'
 image = cv2.imread(image_path)
 
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -17,7 +17,7 @@ amplitude_data = np.int16(amplitude_data * 32767)
 sample_rate = 44100  
 
 output_dir = r'C:\Users\Personal\Documents\projects\KICS Second Project\scipy_audio\audio_output'
-output_path = os.path.join(output_dir, 'reconstructed_audio.wav')
+output_path = os.path.join(output_dir, 'newS1.wav')
 write(output_path, sample_rate, amplitude_data)
 
 print(f'Audio file saved at: {output_path}')
