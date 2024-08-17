@@ -10,57 +10,65 @@ import librosa.display
 import matplotlib.pyplot as plt
 
 # Define paths to training and testing data folders
-train_data_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\convolution_nn\dataset'
-test_data_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\convolution_nn\valid'
+train_data_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\RNN_model\train'
+test_data_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\RNN_model\test'
 
-# Load mel spectrogram plots
-mel_spectrograms = []
-labels = []
+# Define number of Mel frequency bins
+n_mels = 40
+
+# Define a function to extract Mel spectrograms
+def extract_mel_spectrogram(file_path):
+    y, sr = librosa.load(file_path)
+    mel_spectrogram = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=n_mels)
+    return mel_spectrogram
 
 # Load mel spectrogram plots and their corresponding labels
 # For training data
+X_train = []
+y_train = []
 for file in os.listdir(train_data_path):
     if file.endswith('.wav'):
         # Assuming your training data files are named with their class label 
         # Example: 'cat_1.wav', 'dog_2.wav'
         label = file.split('_')[0]
         file_path = os.path.join(train_data_path, file)
-        mel_spectrogram, sr = librosa.load(file_path)
-        mel_spectrogram = librosa.feature.melspectrogram(y=mel_spectrogram, sr=sr, n_mels=40)
-        mel_spectrograms.append(mel_spectrogram)
-        labels.append(label)
+        mel_spectrogram = extract_mel_spectrogram(file_path)
+        X_train.append(mel_spectrogram)
+        y_train.append(label)
 
 # For testing data
+X_test = []
+y_test = []
 for file in os.listdir(test_data_path):
     if file.endswith('.wav'):
         # Assuming your testing data files are named with their class label 
         # Example: 'cat_1.wav', 'dog_2.wav'
         label = file.split('_')[0]
         file_path = os.path.join(test_data_path, file)
-        mel_spectrogram, sr = librosa.load(file_path)
-        mel_spectrogram = librosa.feature.melspectrogram(y=mel_spectrogram, sr=sr, n_mels=40)
-        mel_spectrograms.append(mel_spectrogram)
-        labels.append(label)
+        mel_spectrogram = extract_mel_spectrogram(file_path)
+        X_test.append(mel_spectrogram)
+        y_test.append(label)
 
 # Convert mel spectrograms and labels to numpy arrays
-mel_spectrograms = np.array(mel_spectrograms)
-labels = np.array(labels)
+X_train = np.array(X_train)
+y_train = np.array(y_train)
+X_test = np.array(X_test)
+y_test = np.array(y_test)
 
 # One-hot encode labels
 le = LabelEncoder()
-labels = le.fit_transform(labels)
-labels = tf.keras.utils.to_categorical(labels)
-
-# Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(mel_spectrograms, labels, test_size=0.2, random_state=42)
+y_train = le.fit_transform(y_train)
+y_train = tf.keras.utils.to_categorical(y_train)
+y_test = le.transform(y_test)
+y_test = tf.keras.utils.to_categorical(y_test)
 
 # Define RNN model
 model = keras.Sequential([
-    keras.layers.LSTM(units=128, return_sequences=True, input_shape=(mel_spectrograms.shape[1], mel_spectrograms.shape[2])),
+    keras.layers.LSTM(units=128, return_sequences=True, input_shape=(X_train.shape[1], X_train.shape[2])),
     keras.layers.Dropout(0.2),
     keras.layers.LSTM(units=64),
     keras.layers.Dropout(0.2),
-    keras.layers.Dense(units=8, activation='softmax')
+    keras.layers.Dense(units=y_train.shape[1], activation='softmax')
 ])
 
 # Compile RNN model
