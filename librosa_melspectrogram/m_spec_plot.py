@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 # Path to the audio file
-audio_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\librosa_melspectrogram\S1.wav'
+audio_path = r'C:\Users\Personal\Documents\projects\KICS Second Project\clapsound.wav'
 
 # Load the audio file
 y, sr = librosa.load(audio_path, sr=None)
@@ -30,7 +30,7 @@ output_directory = r'C:\Users\Personal\Documents\projects\KICS Second Project\li
 os.makedirs(output_directory, exist_ok=True)
 
 # Path to save the output image
-output_image_path = os.path.join(output_directory, 'newS1.png')
+output_image_path = os.path.join(output_directory, 'clapped.png')
 
 # Save the plot as a PNG file
 plt.savefig(output_image_path)
